@@ -695,7 +695,7 @@ size_t jas_stream_read(jas_stream_t *stream, void *buf, size_t cnt)
 		if ((c = jas_stream_getc(stream)) == EOF) {
 			return n;
 		}
-		*bufptr++ = c;
+		*bufptr++ = (char)c;
 		++n;
 	}
 
